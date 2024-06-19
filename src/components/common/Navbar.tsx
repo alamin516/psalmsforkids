@@ -1,10 +1,43 @@
 import Image from "next/image";
 import Link from "next/link";
 
+const menuItems = [
+  {
+    title: "Home",
+    path: "/",
+    classes: "",
+  },
+  {
+    title: "About",
+    path: "/about",
+    classes: "",
+  },
+  {
+    title: "Shop",
+    path: "/shop",
+    classes: "",
+  },
+  {
+    title: "Kids Lab",
+    path: "#",
+    classes: "",
+  },
+  {
+    title: "Blog",
+    path: "/blog",
+    classes: "",
+  },
+  {
+    title: "Contact",
+    path: "/contact",
+    classes: "",
+  },
+];
+
 const Navbar = () => {
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-[#212f3c] text-white">
-      <div className="container flex md:h-[72px] lg:h-[72px] max-w-screen-2xl items-center">
+      <div className="container flex h-[72px] h-[72px] max-w-screen-2xl items-center">
         <div className="mr-4 hidden md:flex">
           <Link className="mr-6 flex items-center space-x-2" href="/">
             <Image
@@ -15,35 +48,22 @@ const Navbar = () => {
               alt="Psalms For Kids ™ logo"
             />
           </Link>
-          <nav className="flex items-center gap-4 text-sm lg:gap-6 text-white">
-            <Link className="transition-colors  text-white" href="/docs">
-              Docs
-            </Link>
-            <Link
-              className="transition-colors text-white"
-              href="/docs/components"
-            >
-              Components
-            </Link>
-            <Link className="transition-colors  text-white" href="/themes">
-              Themes
-            </Link>
-            <Link className="transition-colors  text-white" href="/examples">
-              Examples
-            </Link>
-            <Link className="transition-colors  text-white" href="/blocks">
-              Blocks
-            </Link>
-            <Link
-              className="hidden text-white transition-colors  lg:block"
-              href="https://github.com/shadcn-ui/ui"
-            >
-              GitHub
-            </Link>
+          <nav className="hidden text-white">
+            {menuItems.map((item, i) => {
+              return (
+                <Link
+                  key={i}
+                  className={`${item.classes} transition-colors  text-white`}
+                  href={item.path}
+                >
+                  {item.title}
+                </Link>
+              );
+            })}
           </nav>
         </div>
         <button
-          className="inline-flex items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 hover:text-accent-foreground h-9 py-2 mr-2 px-0 text-base hover:bg-transparent focus-visible:bg-transparent focus-visible:ring-0 focus-visible:ring-offset-0 md:hidden"
+          className="inline-flex items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 hover:text-accent-foreground h-9 py-2 mr-4 px-0 text-base hover:bg-transparent focus-visible:bg-transparent focus-visible:ring-0 focus-visible:ring-offset-0 md:hidden"
           type="button"
           aria-haspopup="dialog"
           aria-expanded="false"
@@ -82,23 +102,30 @@ const Navbar = () => {
           <span className="sr-only">Toggle Menu</span>
         </button>
         <div className="flex flex-1 items-center justify-between space-x-2 md:justify-end">
-          <div className="w-full flex-1 md:w-auto md:flex-none">
-            <button className="inline-flex items-center whitespace-nowrap transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 border border-input hover:bg-accent hover:text-accent-foreground px-4 py-2 relative h-8 w-full justify-start rounded-[0.5rem] bg-background text-sm font-normal text-muted-foreground shadow-none sm:pr-12 md:w-40 lg:w-64">
-              <span className="hidden lg:inline-flex">
-                Search documentation...
-              </span>
-              <span className="inline-flex lg:hidden">Search...</span>
-              <kbd className="pointer-events-none absolute right-[0.3rem] top-[0.3rem] hidden h-5 select-none items-center gap-1 rounded border bg-muted px-1.5 font-mono text-[10px] font-medium opacity-100 sm:flex">
-                <span className="text-xs">⌘</span>K
-              </kbd>
-            </button>
-          </div>
-          <nav className="flex items-center">
-            <Link
-              target="_blank"
-              rel="noreferrer"
-              href="https://github.com/shadcn-ui/ui"
-            >
+        
+          <Link className="mr-6 flex items-center space-x-2 lg:hidden md:hidden" href="/">
+            <Image
+              width={200}
+              height={200}
+              src={"/images/Psalms For Kids ™ logo.webp"}
+              className="max-w-[150px] h-[50px]"
+              alt="Psalms For Kids ™ logo"
+            />
+          </Link>
+
+          <nav className="flex items-center gap-4 text-sm lg:gap-6 text-white">
+            {menuItems.map((item, i) => {
+              return (
+                <Link
+                  key={i}
+                  className={`${item.classes} transition-colors  text-white hidden lg:block md:block xl:block`}
+                  href={item.path}
+                >
+                  {item.title}
+                </Link>
+              );
+            })}
+            <Link target="_blank" rel="noreferrer" href="/">
               <div className="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 hover:bg-accent hover:text-accent-foreground h-9 py-2 w-9 px-0">
                 <svg viewBox="0 0 438.549 438.549" className="h-4 w-4">
                   <path
@@ -109,11 +136,7 @@ const Navbar = () => {
                 <span className="sr-only">GitHub</span>
               </div>
             </Link>
-            <Link
-              target="_blank"
-              rel="noreferrer"
-              href="https://twitter.com/shadcn"
-            >
+            <Link target="_blank" rel="noreferrer" href="/">
               <div className="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 hover:bg-accent hover:text-accent-foreground h-9 py-2 w-9 px-0">
                 <svg
                   className="h-3 w-3 fill-current"
