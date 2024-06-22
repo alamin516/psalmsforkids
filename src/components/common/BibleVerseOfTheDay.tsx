@@ -7,8 +7,6 @@ async function getData() {
       ).json()
     );
 
-    console.log(verse)
-   
     return {verse};
   }
 

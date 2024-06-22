@@ -1,0 +1,112 @@
+.latest-post li:last-child{
+  border: none!important;
+}
+
+
+
+
+.socials {
+  display: flex !important;
+  align-items: center;
+  gap: 20px;
+}
+
+.socials a {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 1rem;
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.8);
+  z-index: 3;
+  transition: 0.35s;
+}
+
+.socials a::before {
+  position: absolute;
+  content: "";
+  width: 40px !important;
+  aspect-ratio: 1;
+  border-radius: 1rem;
+  bottom: 0 !important;
+  right: -2px !important;
+  background: radial-gradient(
+    circle at 10% 100%,
+    #ffe17d 0%,
+    #ffcd69 10%,
+    #fa9137 30%,
+    #eb4141 60%,
+    #c33cbe 86%
+  );
+  z-index: -1;
+  transform-origin: 100% 100%;
+  transform: rotate(10deg);
+  transition: 0.3s;
+}
+
+.socials a::after {
+  position: absolute;
+  content: "";
+  top: 0 !important;
+  left: 0 !important;
+  width: 40px;
+  aspect-ratio: 1 !important;
+  border-radius: 1rem;
+  border: solid 2px rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(4px) brightness(90%);
+  -webkit-backdrop-filter: blur(4px) brightness(60%);
+  z-index: -1;
+  transition: 0.3s;
+}
+
+.socials a:hover::before {
+  transform: rotate(0deg);
+  border-radius: 50% !important;
+}
+
+.socials a:hover::after {
+  backdrop-filter: blur(4px) brightness(100%);
+  transform: rotate(-15deg);
+  border-radius: 50% !important;
+  width: 50px !important;
+  top: -5px !important;
+  left: -5px !important;
+}
+
+.socials a:nth-child(3)::before {
+  background: #c60606;
+}
+
+.icons{
+    font-size: 32px;
+    transition: .35s;
+}
+
+.icons {
+  display: inline-block;
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.socials a .icons {
+  font-size: 32px;
+  transition: 0.35s;
+}
+
+.facebook:before {
+  content: "\f09a";
+}
+
+.twitter:before {
+  content: "\f099";
+}
+
+.instagram:before {
+  content: "\f16d";
+}
