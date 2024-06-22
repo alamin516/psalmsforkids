@@ -1,7 +1,8 @@
 import SimpleLayout from "@/components/layouts/Simple";
+import { HomeCarousel } from "@/components/users/Home/HomeCarousel";
 
 export default function Home() {
   return <SimpleLayout>
-    <h2>Home</h2>
+    <HomeCarousel/>
   </SimpleLayout>;
 }

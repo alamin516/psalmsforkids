@@ -1,5 +1,12 @@
+import PageTitle from "@/components/common/PageTitle";
+import SimpleLayout from "@/components/layouts/Simple";
+
 const page = () => {
-  return <div>About Page</div>;
+  return (
+    <SimpleLayout>
+      <PageTitle image={`https://psalmsforkids.com/wp-content/uploads/2023/04/AdobeStock_95050811.webp`} title={'About'} description={'We are awesome designer'} />
+    </SimpleLayout>
+  );
 };
 
 export default page;
