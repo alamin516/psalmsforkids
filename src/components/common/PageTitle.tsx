@@ -1,4 +1,12 @@
-const PageTitle = ({image, title, description}) => {
+import React from "react";
+
+interface PageTitlePros{
+    image: string,
+    title: string,
+    description: string
+}
+
+const PageTitle: React.FC<PageTitlePros> = ({image, title, description}) => {
   return (
     <section
       className="relative bg-cover bg-center bg-no-repeat overflow-hidden pt-32 pb-32"

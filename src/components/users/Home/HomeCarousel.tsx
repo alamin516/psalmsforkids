@@ -18,6 +18,9 @@ const images = [
     }
 ]
 
+
+
+
 export function HomeCarousel() {
   const plugin = React.useRef(
     Autoplay({ delay: 2000, stopOnInteraction: true })
@@ -45,8 +48,6 @@ export function HomeCarousel() {
           </CarouselItem>
         ))}
       </CarouselContent>
-      <CarouselPrevious />
-      <CarouselNext />
     </Carousel>
   );
 }
