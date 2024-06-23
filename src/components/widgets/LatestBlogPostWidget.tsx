@@ -2,7 +2,7 @@ import Image from "next/image";
 
 const LatestBlogPostWidget = () => {
   return (
-    <div className="widget sm:mb-8 md:px-[15px]">
+    <div className="widget mb-8 md:px-[15px]">
       <div className="widget">
         <div className="text-sm uppercase mb-4 font-henny">
           Latest Blog Post
