@@ -5,8 +5,8 @@ import VideoTab from "./VideoTab";
 
 const TabsButtons = () => {
   return (
-    <div className="max-w-6xl rounded-xl overflow-hidden shadow-lg text-white glass-panel">
-      <div className="p-5">
+    <div className="max-w-6xl rounded-xl overflow-hidden shadow-lg text-white lg:glass-panel">
+      <div className="lg:p-5 p-2">
         <h2 className="text-center">Welcome to Psalms for Kids</h2>
 
         {/* Tabs */}

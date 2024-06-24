@@ -11,7 +11,7 @@ export default function Home() {
     <SimpleLayout>
       <HomeCarousel />
       <div className="back-img">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 py-10 px-5 sm:px-10 shadow-lg text-white bg-black  bg-opacity-80 backdrop-filter backdrop-blur-lg">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 py-10 lg:px-5 sm:px-5 px-2  shadow-lg text-white bg-black  bg-opacity-80 backdrop-filter backdrop-blur-lg">
           {/* Banner 1 */}
           <div className="col-span-3 hidden lg:block text-center">
             <div className="flex justify-center">
