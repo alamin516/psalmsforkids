@@ -4,3 +4,21 @@
   background-repeat: no-repeat;
   background-size: cover;
 }
+
+.glass-panel {
+  background-color: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.1);
+  width: 100%;
+  backdrop-filter: blur(10px);
+}
+
+.glass-button {
+  background-color: rgba(255,255,255,0.1);
+  border: 1px solid rgba(255,255,255,0.1);
+  backdrop-filter: blur(30px);
+  color: rgba(255,255,255,0.8);
+}
+
+.glass-button:hover {
+  background-color: rgba(255,255,255,0.2);
+}

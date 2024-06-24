@@ -1,10 +1,11 @@
 import React from "react";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import PsalmsButtons from "./PsalmsButtons";
+import VideoTab from "./VideoTab";
 
 const TabsButtons = () => {
   return (
-    <div className="max-w-6xl rounded-xl overflow-hidden shadow-lg text-white bg-blue-700  bg-opacity-40 backdrop-filter backdrop-blur-lg ">
+    <div className="max-w-6xl rounded-xl overflow-hidden shadow-lg text-white glass-panel">
       <div className="p-5">
         <h2 className="text-center">Welcome to Psalms for Kids</h2>
 
@@ -19,14 +20,18 @@ const TabsButtons = () => {
               <TabsTrigger value="audio">Audio</TabsTrigger>
               <TabsTrigger value="video">Video</TabsTrigger>
             </TabsList>
-            <TabsContent value="psalms">
-              <PsalmsButtons/>
-            </TabsContent>
-            <TabsContent value="genre">Genre</TabsContent>
-            <TabsContent value="quiz">Quiz</TabsContent>
-            <TabsContent value="songs">Songs</TabsContent>
-            <TabsContent value="audio">Audio</TabsContent>
-            <TabsContent value="video">Video</TabsContent>
+            <div className="pt-4">
+              <TabsContent value="psalms">
+                <PsalmsButtons />
+              </TabsContent>
+              <TabsContent value="genre">Genre</TabsContent>
+              <TabsContent value="quiz">Quiz</TabsContent>
+              <TabsContent value="songs">Songs</TabsContent>
+              <TabsContent value="audio">Audio</TabsContent>
+              <TabsContent value="video">
+                <VideoTab />
+              </TabsContent>
+            </div>
           </Tabs>
         </div>
       </div>

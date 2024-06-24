@@ -1,12 +1,17 @@
-import SimpleLayout from '@/components/layouts/Simple'
-import React from 'react'
+import PageTitle from "@/components/common/PageTitle";
+import SimpleLayout from "@/components/layouts/Simple";
+import React from "react";
 
 const page = () => {
   return (
     <SimpleLayout>
-        <div>Contact Page</div>
+      <PageTitle
+        title="Contact"
+        description="Thank You For Stopping by"
+        image="/images/Contact.webp"
+      />
     </SimpleLayout>
-  )
-}
+  );
+};
 
-export default page
+export default page;
