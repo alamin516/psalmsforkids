@@ -7,18 +7,21 @@ const SinglePsalm = () => {
   const params = useParams();
   const { id } = params;
 
-  const prev = parseFloat(id) - 1;
-  const next = parseFloat(id) + 1;
+   // Ensure id is a string
+   const idStr = Array.isArray(id) ? id[0] : id;
+
+   const prev = idStr ? parseFloat(idStr) - 1 : 0;
+   const next = idStr ? parseFloat(idStr) + 1 : 0;
 
   const [disablePrev, setDisablePrev] = useState(false);
   const [disableNext, setDisableNext] = useState(false);
 
   useEffect(() => {
-    if (id) {
+    if (idStr) {
       setDisablePrev(prev < 1);
       setDisableNext(next > 150);
     }
-  }, [id, prev, next]);
+  }, [idStr, prev, next]);
 
   return (
     <div className="container max-w-7xl py-10">
