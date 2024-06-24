@@ -12,7 +12,7 @@ const TabsButtons = () => {
         {/* Tabs */}
         <div className="mt-10">
           <Tabs defaultValue="psalms" className="w-full">
-            <TabsList className="grid w-full grid-cols-6 bg-transparent">
+            <TabsList className="grid w-full grid-cols-6 gap-1 bg-transparent">
               <TabsTrigger value="psalms">Psalms</TabsTrigger>
               <TabsTrigger value="genre">Genre</TabsTrigger>
               <TabsTrigger value="quiz">Quiz</TabsTrigger>

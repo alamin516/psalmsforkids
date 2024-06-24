@@ -4,7 +4,7 @@ import BannerTwo from "@/components/users/Home/BannerTwo";
 import { HomeCarousel } from "@/components/users/Home/HomeCarousel";
 import TabsButtons from "@/components/users/Home/TabsButtons";
 import TimelineSlider from "@/components/users/Home/TimelineSlider";
-import "@/styles/tabs.css";
+
 
 export default function Home() {
   return (

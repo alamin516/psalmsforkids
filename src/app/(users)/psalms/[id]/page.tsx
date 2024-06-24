@@ -1,18 +1,16 @@
-'use client'
-import SimpleLayout from '@/components/layouts/Simple'
-import { useSearchParams } from 'next/navigation'
-import React from 'react'
+import SimpleLayout from "@/components/layouts/Simple";
+import SinglePsalm from "@/components/users/Psalms/SinglePsalm";
+import { useSearchParams } from "next/navigation";
+import { useRouter } from "next/router";
+import React from "react";
 
 const page = () => {
-  const id = useSearchParams()
-
+  
   return (
     <SimpleLayout>
-      <div>
-        {id}
-      </div>
+      <SinglePsalm />
     </SimpleLayout>
-  )
-}
+  );
+};
 
-export default page
+export default page;

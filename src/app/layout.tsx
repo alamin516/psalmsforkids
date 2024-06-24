@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Henny_Penny, Roboto } from "next/font/google";
 import "./globals.css";
+import "@/styles/tabs.css";
 import ScrollBottomToTop from "@/components/common/ScrollBottomToTop";
 
 const roboto = Roboto({
