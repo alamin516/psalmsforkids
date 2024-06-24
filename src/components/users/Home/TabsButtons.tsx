@@ -1,5 +1,6 @@
 import React from "react";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import PsalmsButtons from "./PsalmsButtons";
 
 const TabsButtons = () => {
   return (
@@ -18,7 +19,9 @@ const TabsButtons = () => {
               <TabsTrigger value="audio">Audio</TabsTrigger>
               <TabsTrigger value="video">Video</TabsTrigger>
             </TabsList>
-            <TabsContent value="psalms">Psalms</TabsContent>
+            <TabsContent value="psalms">
+              <PsalmsButtons/>
+            </TabsContent>
             <TabsContent value="genre">Genre</TabsContent>
             <TabsContent value="quiz">Quiz</TabsContent>
             <TabsContent value="songs">Songs</TabsContent>
