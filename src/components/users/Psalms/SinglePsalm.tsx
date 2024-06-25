@@ -7,7 +7,6 @@ const SinglePsalm = () => {
   const params = useParams();
   const { id } = params;
 
-   // Ensure id is a string
    const idStr = Array.isArray(id) ? id[0] : id;
 
    const prev = idStr ? parseFloat(idStr) - 1 : 0;

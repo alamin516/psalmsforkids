@@ -1,9 +1,12 @@
+import ComingSoon from "@/components/common/ComingSoon";
 import SimpleLayout from "@/components/layouts/Simple";
 
 const page = () => {
-  return <SimpleLayout>
-  <h2>Shop Page</h2>
-</SimpleLayout>;
+  return (
+    <SimpleLayout>
+      <ComingSoon />
+    </SimpleLayout>
+  );
 };
 
 export default page;
