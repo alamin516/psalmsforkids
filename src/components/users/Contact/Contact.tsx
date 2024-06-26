@@ -3,7 +3,7 @@ import React from "react";
 
 const Contact = () => {
   return (
-    <div className="py-10 lg:py-20">
+    <div className="py-10 lg:pt-20 md:pt-16">
       <div className="container max-w-2xl text-center text-base text-gray-600 leading-[26px]">
         <p className="mb-4">
           Psalm For Kids is proudly made in Multicultural London, UK. Please
@@ -36,14 +36,14 @@ const Contact = () => {
           height={260}
           src={"/images/contact/man-with-flag.png"}
           alt="man-with-flag"
-          className="my-4 mx-auto"
+          className="my-4 mx-auto w-auto h-auto"
         />
         <p className="mb-3">Special Thanks to:</p>
         <p className="mb-3">
           Crossroad kids club for their biblical and informative videos
         </p>
       </div>
-      <div className="py-10">
+      <div className="pt-10">
         <p>
           <iframe
             style={{ border: "0" }}

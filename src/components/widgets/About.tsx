@@ -13,7 +13,8 @@ const AboutWidget = () => {
             height={50}
             src={"/images/Psalms For Kids ™ logo.webp"}
             alt="About Psalms for Kids"
-            className="max-w-full h-auto align-middle border-0"
+            className="w-auto h-auto align-middle border-0"
+            priority={true}
           />
           <div className="text-xs leading-5 w-11/12 xs:w-full m-0">
             Welcome to the wonderful world of Psalms for kids where you will

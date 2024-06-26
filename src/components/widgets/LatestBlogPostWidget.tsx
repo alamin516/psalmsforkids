@@ -10,30 +10,30 @@ const LatestBlogPostWidget = () => {
         <ul className="latest-post relative top-3 xs:text-left list-none p-0 m-0">
           {[
             {
-              link: "https://psalmsforkids.com/learn-english-with-disney-cinderella/",
+              link: "/learn-english-with-disney-cinderella/",
               imgSrc:
-                "https://psalmsforkids.com/wp-content/uploads/2024/06/1719057370_maxresdefault-81x46.jpg",
+                "/images/posts/1.webp",
               imgAlt: "",
               text: "Learn English With Disney |…",
             },
             {
               link: "https://psalmsforkids.com/a-prayer-when-church-people-reject-you-your-daily-prayer-june-22/",
               imgSrc:
-                "https://psalmsforkids.com/wp-content/uploads/2024/06/A-Prayer-When-Church-People-Reject-You-Your-Daily-81x42.jpg",
+                "/images/posts/2.webp",
               imgAlt: "",
               text: "A Prayer When Church People…",
             },
             {
               link: "https://psalmsforkids.com/how-to-equip-your-teen-volunteers-to-take-the-lead-in-childrens-ministry/",
               imgSrc:
-                "https://psalmsforkids.com/wp-content/uploads/2024/06/How-to-Equip-Your-Teen-Volunteers-to-Take-the-Lead-81x35.jpg",
+                "/images/posts/3.webp",
               imgAlt: "",
               text: "How to Equip Your Teen…",
             },
             {
               link: "https://psalmsforkids.com/daily-bible-verse-hebrews-725-scripturefortoday-bibleverse-scriptureoftheday-biblepassages/",
               imgSrc:
-                "https://psalmsforkids.com/wp-content/uploads/2024/06/1718974005_maxresdefault-81x46.jpg",
+                "/images/posts/4.webp",
               imgAlt: "",
               text: "Daily Bible Verse: Hebrews 7:25…",
             },
@@ -45,13 +45,12 @@ const LatestBlogPostWidget = () => {
               <figure className="w-18 pr-4">
                 <a href={post.link}>
                   <Image
-                    width="60"
-                    height="35"
+                    width={60}
+                    height={35}
                     src={post.imgSrc}
                     alt={post.imgAlt}
-                    className="max-w-full h-auto align-middle border-0"
+                    className="w-full h-auto align-middle border-0"
                     loading="lazy"
-                    decoding="async"
                   />
                 </a>
               </figure>

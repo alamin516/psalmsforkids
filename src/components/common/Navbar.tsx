@@ -48,11 +48,11 @@ const Navbar = () => {
         <div className="mr-4 hidden md:flex">
           <Link className="mr-6 flex items-center space-x-2" href="/">
             <Image
-              width={200}
-              height={200}
+              width={150}
+              height={50}
               src={"/images/Psalms For Kids ™ logo.webp"}
               priority={true}
-              className="max-w-[150px] h-[50px]"
+              className="w-auto h-auto"
               alt="Psalms For Kids ™ logo"
             />
           </Link>
