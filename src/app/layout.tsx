@@ -3,6 +3,7 @@ import { Henny_Penny, Roboto } from "next/font/google";
 import "./globals.css";
 import "@/styles/tabs.css";
 import ScrollBottomToTop from "@/components/common/ScrollBottomToTop";
+import Preloader from "@/components/common/Preloader";
 
 const roboto = Roboto({
   subsets: ["latin"],
@@ -26,6 +27,7 @@ export default function RootLayout({
       <body className={`${roboto.className}`}>
         {children}
         <ScrollBottomToTop/>
+        <Preloader/>
       </body>
     </html>
   );
