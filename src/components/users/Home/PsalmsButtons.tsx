@@ -9,7 +9,7 @@ const PsalmsButtons = () => {
         return (
           <Link
             key={i}
-            href={`/psalms/${i + 1}`}
+            href={`/psalm/${i + 1}`}
             className="w-[42px] h-[42px] flex items-center justify-center glass-button rounded-lg shadow md:mt-0 sm:max-w-md xl:p-0"
           >
             <span>{i + 1}</span>
