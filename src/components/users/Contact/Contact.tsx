@@ -27,7 +27,7 @@ const Contact = () => {
         <p className="mb-3">
           Bible Version: NIRV (The New International Reader Version Bible for
           early readers is recommended by more Christian schools and churches
-          than any other Bible for kids!) Made in England
+          than any other Bible for kids!)
         </p>
         <p className="mb-3">Made in England</p>
 
