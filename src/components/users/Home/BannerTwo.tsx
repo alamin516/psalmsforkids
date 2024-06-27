@@ -25,13 +25,13 @@ const BannerTwo = () => {
       <CarouselContent>
         {brandsSlider.map((item, index) => (
           <CarouselItem key={index}>
-           <div className="relative p-2  rounded-md shadow-lg text-white bg-black  bg-opacity-80 backdrop-filter backdrop-blur-lg ">
+           <div className="relative p-2  rounded-md shadow-lg text-white glass-button">
               <div className="relative z-10">
                 <Link href="#">
                   <Image
-                    className="w-full rounded-md min-h-[400px]"
+                    className="w-full rounded-md !h-[300px]"
                     width={300}
-                    height={400}
+                    height={300}
                     src={item.image}
                     alt=""
                   />

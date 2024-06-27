@@ -5,7 +5,7 @@ import '@/styles/preloader.css'
 const Preloader = () => {
     const [display, setDisplay] = useState(false);
 
-    setTimeout(()=> {
+    setInterval(()=> {
         setDisplay(true)
     }, 2000)
 
