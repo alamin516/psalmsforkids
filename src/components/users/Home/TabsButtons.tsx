@@ -3,6 +3,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import PsalmsButtons from "./PsalmsButtons";
 import VideoTab from "./VideoTab";
 import Genre from "./Genre";
+import QuizTab from "./QuizTab";
 
 const TabsButtons = () => {
   return (
@@ -28,7 +29,9 @@ const TabsButtons = () => {
               <TabsContent value="genre">
                 <Genre/>
               </TabsContent>
-              <TabsContent value="quiz">Quiz</TabsContent>
+              <TabsContent value="quiz">
+                <QuizTab/>
+              </TabsContent>
               <TabsContent value="songs">Songs</TabsContent>
               <TabsContent value="audio">Audio</TabsContent>
               <TabsContent value="video">
