@@ -4,17 +4,21 @@ import PsalmsButtons from "./PsalmsButtons";
 import VideoTab from "./VideoTab";
 import Genre from "./Genre";
 import QuizTab from "./QuizTab";
+import SongsTab from "./SongsTab";
+import AudioTab from "./AudioTab";
 
 const TabsButtons = () => {
   return (
     <div className="max-w-6xl rounded-xl overflow-hidden shadow-2xl text-white lg:glass-panel">
       <div className="lg:p-5 p-2">
-        <h2 className="text-center text-2xl lg:text-3xl font-henny">Welcome to Psalms for Kids</h2>
+        <h2 className="text-center text-2xl lg:text-3xl font-henny">
+          Welcome to Psalms for Kids
+        </h2>
 
         {/* Tabs */}
         <div className="mt-10">
           <Tabs defaultValue="psalms" className="w-full">
-            <TabsList className="grid w-full grid-cols-6 gap-1 bg-transparent">
+            <TabsList className="grid w-full grid-cols-6 gap-1 bg-transparent text-white">
               <TabsTrigger value="psalms">Psalms</TabsTrigger>
               <TabsTrigger value="genre">Genre</TabsTrigger>
               <TabsTrigger value="quiz">Quiz</TabsTrigger>
@@ -27,13 +31,17 @@ const TabsButtons = () => {
                 <PsalmsButtons />
               </TabsContent>
               <TabsContent value="genre">
-                <Genre/>
+                <Genre />
               </TabsContent>
               <TabsContent value="quiz">
-                <QuizTab/>
+                <QuizTab />
               </TabsContent>
-              <TabsContent value="songs">Songs</TabsContent>
-              <TabsContent value="audio">Audio</TabsContent>
+              <TabsContent value="songs">
+                <SongsTab />
+              </TabsContent>
+              <TabsContent value="audio">
+                <AudioTab/>
+              </TabsContent>
               <TabsContent value="video">
                 <VideoTab />
               </TabsContent>
