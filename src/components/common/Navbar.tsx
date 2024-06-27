@@ -99,9 +99,8 @@ const Navbar = () => {
               );
             })}
 
-            <button
+            <div
               className="inline-flex items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 hover:text-[#C1178C] h-9 py-2 mr-4 px-0 text-base hover:bg-transparent focus-visible:bg-transparent focus-visible:ring-0 focus-visible:ring-offset-0 md:hidden"
-              type="button"
               aria-haspopup="dialog"
               aria-expanded="false"
               aria-controls="radix-:R16u6la:"
@@ -109,7 +108,7 @@ const Navbar = () => {
             >
               <Menu className="h-4 w-4" />
               <span className="sr-only">Toggle Menu</span>
-            </button>
+            </div>
 
             <Link target="_blank" rel="noreferrer" href="https://www.facebook.com/thepfk">
               <div className="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 hover:bg-accent hover:text-accent-foreground h-9 py-2 w-9 px-0 hover:text-[#C1178C]">

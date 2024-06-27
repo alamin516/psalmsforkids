@@ -31,7 +31,7 @@ const SinglePsalm = () => {
           {!disablePrev && (
             <Link
               className="text-black px-5 py-1 bg-white/[0.5] border-white/[0.5] rounded-lg shadow hover:bg-[#9F176A] hover:text-white"
-              href={`/psalms/${prev}`}
+              href={`/psalm/${prev}`}
             >
               Psalm {prev}
             </Link>
@@ -41,7 +41,7 @@ const SinglePsalm = () => {
           {!disableNext && (
             <Link
               className="text-black px-5 py-1 bg-white/[0.5] border-white/[0.5] rounded-lg shadow hover:bg-[#9F176A] hover:text-white"
-              href={`/psalms/${next}`}
+              href={`/psalm/${next}`}
             >
               Psalm {next}
             </Link>
