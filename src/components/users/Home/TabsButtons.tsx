@@ -7,9 +7,9 @@ import QuizTab from "./QuizTab";
 
 const TabsButtons = () => {
   return (
-    <div className="max-w-6xl rounded-xl overflow-hidden shadow-lg text-white lg:glass-panel">
+    <div className="max-w-6xl rounded-xl overflow-hidden shadow-2xl text-white lg:glass-panel">
       <div className="lg:p-5 p-2">
-        <h2 className="text-center">Welcome to Psalms for Kids</h2>
+        <h2 className="text-center text-2xl lg:text-3xl font-henny">Welcome to Psalms for Kids</h2>
 
         {/* Tabs */}
         <div className="mt-10">
