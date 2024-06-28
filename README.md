@@ -1,36 +1,107 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# PsalmsForKids
 
-## Getting Started
+Welcome to PsalmsForKids, a Next.js project designed to provide an engaging and interactive way for children to learn about the Psalms. This project leverages the power of Next.js to deliver a fast and user-friendly experience.
 
-First, run the development server:
+## Table of Contents
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- [Introduction](#introduction)
+- [Features](#features)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Contributing](#contributing)
+- [License](#license)
+- [Contact](#contact)
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Introduction
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+PsalmsForKids is an educational platform that helps children understand and enjoy the Psalms through interactive content and engaging visuals. The project aims to make learning about the Psalms fun and accessible for kids of all ages.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## Features
 
-## Learn More
+- Interactive and engaging content for children
+- Easy navigation through the Psalms
+- Responsive design for optimal viewing on all devices
+- Fast and reliable performance thanks to Next.js
 
-To learn more about Next.js, take a look at the following resources:
+## Installation
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+To get started with PsalmsForKids, follow these steps:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+1. **Clone the repository:**
 
-## Deploy on Vercel
+    ```bash
+    git clone https://github.com/yourusername/psalmsforkids.git
+    ```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+2. **Navigate to the project directory:**
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+    ```bash
+    cd psalmsforkids
+    ```
+
+3. **Install the dependencies:**
+
+    ```bash
+    npm install
+    ```
+
+## Usage
+
+To run the project locally:
+
+1. **Start the development server:**
+
+    ```bash
+    npm run dev
+    ```
+
+2. **Open your browser and navigate to:**
+
+    ```
+    http://localhost:3000
+    ```
+
+You should see the PsalmsForKids homepage.
+
+## Contributing
+
+We welcome contributions to PsalmsForKids! To contribute, please follow these steps:
+
+1. **Fork the repository.**
+
+2. **Create a new branch:**
+
+    ```bash
+    git checkout -b my-feature-branch
+    ```
+
+3. **Make your changes and commit them:**
+
+    ```bash
+    git commit -m "🎨 Add new feature"
+    ```
+
+4. **Push to the branch:**
+
+    ```bash
+    git push origin my-feature-branch
+    ```
+
+5. **Open a pull request.**
+
+Please ensure your code adheres to our coding standards and includes appropriate tests.
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
+## Contact
+
+If you have any questions, suggestions, or feedback, feel free to contact us at:
+
+- Email: support@psalmsforkids.com
+- Twitter: [@PsalmsForKids](https://twitter.com/psalmsforkids)
+
+---
+
+Thank you for using PsalmsForKids! We hope this project helps children learn and enjoy the Psalms in a fun and interactive way.
