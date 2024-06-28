@@ -78,3 +78,15 @@
 }
 
 
+
+/* styles/globals.css */
+@font-face {
+  font-family: 'Henny Penny';
+  src: url('/fonts/HennyPenny-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.henny-penny {
+  font-family: 'Henny Penny', sans-serif;
+}
