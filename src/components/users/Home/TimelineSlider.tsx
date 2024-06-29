@@ -10,7 +10,6 @@ import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
 
 import { Autoplay, EffectCoverflow, Pagination } from "swiper/modules";
-import { ChevronLeft, ChevronRight } from "lucide-react";
 import Image from "next/image";
 import "@/styles/timeline.css";
 
@@ -56,7 +55,7 @@ const timelineItems = [
 
 const TimelineSlider = () => {
   return (
-    <div className="max-w-7xl mx-auto">
+    <div className="container max-w-4xl mx-auto">
       <Swiper
         effect={"coverflow"}
         grabCursor={true}
@@ -66,6 +65,7 @@ const TimelineSlider = () => {
           delay: 2500,
           disableOnInteraction: false,
         }}
+        loop={true}
         coverflowEffect={{
           rotate: 50,
           stretch: 0,
@@ -80,14 +80,14 @@ const TimelineSlider = () => {
           return (
             <SwiperSlide key={i} className="bg-transparent">
               <div className="text-center">
-                <h2>{item["title"]}</h2>
+                <h2 className="font-henny text-[20px] mb-3">{item["title"]}</h2>
                 <Image
                   width={300}
                   height={500}
                   src={item["src"]}
                   alt={item["title"]}
                 />
-                <p>{item["description"]}</p>
+                <p className="mt-3 ">{item["description"]}</p>
               </div>
             </SwiperSlide>
           );
