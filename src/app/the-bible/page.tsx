@@ -4,7 +4,7 @@ import SimpleLayout from "@/components/layouts/Simple";
 const page = () => {
   return (
     <SimpleLayout>
-      <ComingSoon title="Shop"/>
+      <ComingSoon title="The Bible" />
     </SimpleLayout>
   );
 };

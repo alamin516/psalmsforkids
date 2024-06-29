@@ -26,7 +26,7 @@ const TabsButtons = () => {
               <TabsTrigger value="audio">Audio</TabsTrigger>
               <TabsTrigger value="video">Video</TabsTrigger>
             </TabsList>
-            <div className="pt-4">
+            <div className="pt-4 pb-10">
               <TabsContent value="psalms">
                 <PsalmsButtons />
               </TabsContent>

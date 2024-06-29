@@ -19,7 +19,7 @@ export default function Home() {
               </div>
             </div>
             {/* Tabs */}
-            <div className="lg:col-span-6">
+            <div className="lg:col-span-6 mb-5">
               <TabsButtons />
             </div>
             {/* Banner 2 */}
@@ -30,7 +30,7 @@ export default function Home() {
             </div>
           </div>
           {/* Timeline slider */}
-          <div className=" text-white">
+          <div className=" text-white  py-10">
             <TimelineSlider />
           </div>
         </div>

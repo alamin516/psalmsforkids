@@ -16,7 +16,7 @@ const PsalmsButtons = () => {
           </Link>
         );
       })}
-      <Link href={'/bible'} className="w-[90px] h-[42px] flex items-center justify-center glass-button rounded-lg shadow md:mt-0 sm:max-w-md xl:p-0">
+      <Link href={'/the-bible'} className="w-[90px] h-[42px] flex items-center justify-center glass-button rounded-lg shadow md:mt-0 sm:max-w-md xl:p-0">
         <span>The Bible</span>
       </Link>
     </div>

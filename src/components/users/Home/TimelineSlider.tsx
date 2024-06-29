@@ -67,10 +67,10 @@ const TimelineSlider = () => {
           disableOnInteraction: false,
         }}
         coverflowEffect={{
-          rotate: 0,
+          rotate: 50,
           stretch: 0,
           depth: 120,
-          modifier: 2.5,
+          modifier: 1,
           slideShadows: true,
         }}
         modules={[EffectCoverflow, Pagination, Autoplay]}

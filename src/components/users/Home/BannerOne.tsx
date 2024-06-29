@@ -18,9 +18,12 @@ const BannerOne = () => {
       className="w-full max-w-xs"
       plugins={[
         Autoplay({
-          delay: 2000,
+          delay: 5000,
         }),
       ]}
+      opts={{
+        loop: true,
+      }}
     >
       <CarouselContent>
         {brandsSlider.map((item, index) => (
@@ -29,9 +32,9 @@ const BannerOne = () => {
               <div className="relative z-10">
                 <Link href="#">
                   <Image
-                    className="w-full rounded-md !h-[300px]"
-                    width={300}
-                    height={300}
+                    className="w-full rounded-md !h-[350px]"
+                    width={350}
+                    height={350}
                     src={item.image}
                     alt=""
                   />
