@@ -1,0 +1,21 @@
+.slider-nav{
+    background-color: rgba(255, 255, 255, 0.1)!important;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(30px);
+}
+
+.slider-bullet {
+    width: 50px;
+    height: 3px;
+    display: inline-block;
+    background: rgba(17, 24, 39, 0.15);
+    cursor: pointer;
+    box-sizing: content-box;
+    margin: 0 4px;
+    z-index: 10;
+}
+
+
+.slider-bullet-active {
+    background: #111827;
+}

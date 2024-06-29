@@ -2,8 +2,10 @@ import type { Metadata } from "next";
 import { Henny_Penny, Roboto } from "next/font/google";
 import "./globals.css";
 import "@/styles/tabs.css";
+import "@/styles/slider.css";
 import ScrollBottomToTop from "@/components/common/ScrollBottomToTop";
 import Preloader from "@/components/common/Preloader";
+
 
 const roboto = Roboto({
   subsets: ["latin"],
