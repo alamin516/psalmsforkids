@@ -1,7 +1,6 @@
 import SimpleLayout from "@/components/layouts/Simple";
 import BannerOne from "@/components/users/Home/BannerOne";
 import BannerTwo from "@/components/users/Home/BannerTwo";
-import HeroSlider from "@/components/users/Home/HeroSlider";
 import { HomeCarousel } from "@/components/users/Home/HomeCarousel";
 import TabsButtons from "@/components/users/Home/TabsButtons";
 import TimelineSlider from "@/components/users/Home/TimelineSlider";
@@ -10,7 +9,6 @@ export default function Home() {
   return (
     <SimpleLayout>
       <HomeCarousel />
-      {/* <HeroSlider/> */}
       <div className="back-img">
         <div className="shadow-lg text-white bg-black  bg-opacity-60 backdrop-filter backdrop-blur-lg">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 py-10 lg:px-5 sm:px-5 px-2  text-white">
