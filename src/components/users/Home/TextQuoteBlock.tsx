@@ -8,14 +8,14 @@ const TextQuoteBlock = () => {
     <div className="flex  items-center lg:gap-10 gap-3 lg:px-20 px-2 py-12 bg-gray-100 rounded-lg shadow-md max-w-6xl mx-auto my-8">
       <div className="flex-shrink-0 relative">
         <Image
-          width={130}
+          width={100}
           height={200}
           src="/images/testimonial/1.jpg"
           alt="Wladimir Alexi"
-          className="object-cover w-24 lg:w-full h-auto rounded-[40%]"
+          className="object-cover w-[100px] lg:w-[130px] lg:h-[180px] rounded-[40%]"
         />
 
-        <Quote size={40} className="absolute -top-5 lg:top-0 -left-2 rotate-180"/>
+        <Quote size={40} className="absolute -top-5 lg:top-0 lg:-left-2 rotate-180"/>
       </div>
       <div className="relative z-10">
         <div>
