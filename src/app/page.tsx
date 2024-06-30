@@ -30,7 +30,7 @@ export default function Home() {
             </div>
           </div>
           {/* Timeline slider */}
-          <div className=" text-white  py-10">
+          <div className="text-white  py-10">
             <TimelineSlider />
           </div>
         </div>

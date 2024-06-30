@@ -1,10 +1,19 @@
 "use client"
+import useAOS from "@/hooks/useAOS";
 import Link from "next/link";
-import React from "react";
+import React, { useEffect } from "react";
 
 const PsalmsButtons = () => {
+  const AOS = useAOS();
+
+  useEffect(() => {
+    AOS.refresh();
+  }, [AOS]);
+
+
   return (
-    <div className="flex flex-wrap justify-center gap-1">
+    <div className="flex flex-wrap justify-center gap-1 aos-init aos-animate"  data-aos="fade-up"
+    data-aos-delay="100">
       {Array.from({ length: 150 }).map((_, i) => {
         return (
           <Link

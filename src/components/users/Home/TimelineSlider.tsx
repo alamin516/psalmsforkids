@@ -9,9 +9,15 @@ import "swiper/css";
 import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
 
-import { Autoplay, EffectCoverflow, Pagination } from "swiper/modules";
+import {
+  Autoplay,
+  EffectCoverflow,
+  Navigation,
+  Pagination,
+} from "swiper/modules";
 import Image from "next/image";
 import "@/styles/timeline.css";
+import { ArrowLeft, ArrowRight } from "lucide-react";
 
 // Timeline Items
 const timelineItems = [
@@ -55,47 +61,59 @@ const timelineItems = [
 
 const TimelineSlider = () => {
   return (
-    <div className="container max-w-4xl mx-auto">
-      <Swiper
-        effect={"coverflow"}
-        grabCursor={true}
-        centeredSlides={true}
-        slidesPerView={"auto"}
-        autoplay={{
-          delay: 2500,
-          disableOnInteraction: false,
-        }}
-        loop={true}
-        coverflowEffect={{
-          rotate: 50,
-          stretch: 0,
-          depth: 120,
-          modifier: 1,
-          slideShadows: true,
-        }}
-        modules={[EffectCoverflow, Pagination, Autoplay]}
-        className="mySwiper"
-      >
-        {timelineItems.map((item, i) => {
-          return (
-            <SwiperSlide key={i} className="bg-transparent">
-              <div className="text-center">
-                <h2 className="font-henny text-[20px] mb-3">{item["title"]}</h2>
-                <Image
-                  width={300}
-                  height={500}
-                  src={item["src"]}
-                  alt={item["title"]}
-                />
-                <p className="mt-3 ">{item["description"]}</p>
-              </div>
-            </SwiperSlide>
-          );
-        })}
-      </Swiper>
+    <div className="container px-0 max-w-5xl mx-auto relative">
+      <div className="container max-w-4xl mx-auto">
+        <Swiper
+          effect={"coverflow"}
+          grabCursor={true}
+          centeredSlides={true}
+          slidesPerView={"auto"}
+          autoplay={{
+            delay: 2000,
+            disableOnInteraction: false,
+          }}
+          navigation={{ nextEl: ".button-next", prevEl: ".button-prev" }}
+          loop={true}
+          coverflowEffect={{
+            rotate: 60,
+            stretch: 0,
+            depth: 100,
+            modifier: 1,
+            slideShadows: true,
+          }}
+          modules={[EffectCoverflow, Pagination, Autoplay, Navigation]}
+          className="mySwiper"
+        >
+          {timelineItems.map((item, i) => {
+            return (
+              <SwiperSlide key={i} className="bg-transparent">
+                <div className="text-center">
+                  <h2 className="font-henny text-[20px] mb-3">
+                    {item["title"]}
+                  </h2>
+                  <Image
+                    width={300}
+                    height={500}
+                    src={item["src"]}
+                    alt={item["title"]}
+                  />
+                  <p className="mt-3 ">{item["description"]}</p>
+                </div>
+              </SwiperSlide>
+            );
+          })}
+        </Swiper>
+      </div>
+
+      <div className="absolute flex w-full justify-between gap-3 items-center z-10 top-1/2">
+        <div className="button-prev w-8 h-8 flex items-center justify-center hover:bg-white rounded-sm hover:text-black cursor-pointer">
+          <ArrowLeft />
+        </div>
+        <div className="button-next w-8 h-8 flex items-center justify-center hover:bg-white rounded-sm hover:text-black cursor-pointer">
+          <ArrowRight />
+        </div>
+      </div>
     </div>
   );
 };
 export default TimelineSlider;
-
-

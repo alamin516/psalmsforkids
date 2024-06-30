@@ -8,7 +8,7 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 
 // import required modules
-import { Pagination, Navigation } from "swiper/modules";
+import { Pagination, Navigation, Autoplay } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 
@@ -36,10 +36,13 @@ export function HomeCarousel() {
       <Swiper
         slidesPerView={1}
         loop={true}
+        spaceBetween={10}
+        grabCursor={true}
         pagination={{
           clickable: true,
           bulletClass: "slider-bullet",
           bulletActiveClass: "slider-bullet-active",
+          horizontalClass: "custom-pagination-horizontal",
         }}
         navigation={{
           nextEl: ".button-next",
@@ -47,7 +50,7 @@ export function HomeCarousel() {
         }}
         speed={500}
         autoplay={{ delay: 3000 }}
-        modules={[Pagination, Navigation]}
+        modules={[Pagination, Navigation, Autoplay]}
         onSlideChange={(swiper) => setCurrentIndex(swiper.realIndex)}
         className="w-full h-[300px] lg:h-[60vh] !p-0 hero-carousel"
       >
@@ -67,16 +70,15 @@ export function HomeCarousel() {
             </div>
           </SwiperSlide>
         ))}
-
-        
       </Swiper>
       <div className="absolute w-full bottom-0 py-2">
-          <div className="container max-w-7xl mx-auto flex justify-between items-center z-10">
-            <div className="text-black z-50">
-              {currentIndex + 1 <= 9 ? `0${currentIndex + 1}` : currentIndex} |{" "}
-              {total <= 9 ? "0" + total : total}
-            </div>
-            <div className="flex gap-3 items-center z-10">
+        <div className="container max-w-7xl mx-auto flex justify-between items-center z-10">
+          <div className="text-black z-50">
+            {currentIndex + 1 <= 9 ? `0${currentIndex + 1}` : currentIndex} |{" "}
+            {total <= 9 ? "0" + total : total}
+          </div>
+          <div className="z-10 hidden md:block lg:block">
+            <div className="flex gap-3 items-center">
               <div className="button-prev w-8 h-8 flex items-center justify-center hover:bg-black rounded-sm hover:text-white cursor-pointer">
                 <ArrowLeft />
               </div>
@@ -86,6 +88,7 @@ export function HomeCarousel() {
             </div>
           </div>
         </div>
+      </div>
     </div>
   );
 }
