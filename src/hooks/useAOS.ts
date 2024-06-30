@@ -1,6 +1,7 @@
 'use client'
 import { useEffect } from 'react';
-import AOS from 'aos';
+import AOS from 'aos'
+
 import 'aos/dist/aos.css';
 
 const useAOS = () => {
@@ -11,6 +12,7 @@ const useAOS = () => {
           once: true, 
         });
       }, []);
+      
     
       return AOS;
 }
