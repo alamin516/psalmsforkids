@@ -2,6 +2,7 @@ import SimpleLayout from "@/components/layouts/Simple";
 import BannerOne from "@/components/users/Home/BannerOne";
 import BannerTwo from "@/components/users/Home/BannerTwo";
 import { HomeCarousel } from "@/components/users/Home/HomeCarousel";
+import QuoteBlock from "@/components/users/Home/QuoteBlock";
 import TabsButtons from "@/components/users/Home/TabsButtons";
 import TimelineSlider from "@/components/users/Home/TimelineSlider";
 
@@ -34,6 +35,9 @@ export default function Home() {
             <TimelineSlider />
           </div>
         </div>
+      </div>
+      <div>
+        <QuoteBlock/>
       </div>
     </SimpleLayout>
   );

@@ -4,10 +4,7 @@ import React, { useRef, useState } from "react";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 
-// Import Swiper styles
-import "swiper/css";
-import "swiper/css/effect-coverflow";
-import "swiper/css/pagination";
+
 
 import {
   Autoplay,
@@ -82,7 +79,6 @@ const TimelineSlider = () => {
             slideShadows: true,
           }}
           modules={[EffectCoverflow, Pagination, Autoplay, Navigation]}
-          className="mySwiper"
         >
           {timelineItems.map((item, i) => {
             return (
