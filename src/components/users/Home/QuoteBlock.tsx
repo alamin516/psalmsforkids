@@ -20,7 +20,7 @@ const QuoteBlock = () => {
       >
         {Array.from({ length: 5 }).map((item, i) => {
           return (
-            <SwiperSlide key={i} className="mb-8">
+            <SwiperSlide key={i}>
               <TextQuoteBlock />
             </SwiperSlide>
           );
