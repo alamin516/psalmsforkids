@@ -1,5 +1,6 @@
 import PageTitle from "@/components/common/PageTitle";
 import SimpleLayout from "@/components/layouts/Simple";
+import BlogSidebar from "@/components/users/Blog/BlogSidebar";
 import Posts from "@/components/users/Blog/Posts";
 
 const page = () => {
@@ -10,14 +11,14 @@ const page = () => {
         title={"Blog"}
         description={"We are awesome designer"}
       />
-      <div className="py-10 lg:pt-20 md:pt-16">
-        <div className="container max-w-7xl text-sm text-gray-600 leading-[26px]">
+      <div className="py-10 lg:pt-20 md:pt-16 lg:px-0 px-2">
+        <div className="container max-w-7xl mx-auto p-0 text-sm text-gray-600 leading-[26px]">
           <div className="grid lg:grid-cols-8 grid-cols-1 gap-10">
-            <div className="col-span-5">
+            <div className="lg:col-span-6">
                 <Posts posts={posts}/>
             </div>
-            <div className="col-span-3">
-                sidebar
+            <div className="lg:col-span-2">
+                <BlogSidebar/>
             </div>
           </div>
         </div>

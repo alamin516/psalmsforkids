@@ -15,7 +15,7 @@ interface PostProps {
   
   const Posts: React.FC<PostsProps> = ({ posts }) => {
     return (
-      <div className="grid grid-cols-1 justify-center">
+      <div className="grid grid-cols-1 justify-center gap-4">
         {posts.slice(0,5).map((post) => (
           <PostsCard key={post.id} post={post} />
         ))}

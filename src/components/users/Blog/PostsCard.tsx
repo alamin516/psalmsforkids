@@ -16,7 +16,7 @@ interface Props {
 
 const PostsCard: React.FC<Props> = ({post}) => {
   return (
-    <div key={post.id} className="flex m-4 border border-gray-300 overflow-hidden w-full">
+    <div key={post.id} className="flex border border-gray-300 overflow-hidden w-full">
           <Image width={300} height={257} src={post.imageUrl} alt={post.title} className="w-2/5 object-cover" />
           <div className="p-4 lg:p-6 flex flex-col justify-between">
             <div>
