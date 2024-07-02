@@ -1,6 +1,7 @@
 import { Facebook, Menu } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import RadialMenu from "./RadialMenu";
 
 const menuItems = [
   {
@@ -69,6 +70,7 @@ const Navbar = () => {
               );
             })}
           </nav>
+          <RadialMenu/>
         </div>
 
         <div className="flex flex-1 items-center justify-between space-x-2 md:justify-end">
@@ -109,6 +111,7 @@ const Navbar = () => {
               <Menu className="h-4 w-4" />
               <span className="sr-only">Toggle Menu</span>
             </div>
+
 
             <Link target="_blank" rel="noreferrer" href="https://www.facebook.com/thepfk">
               <div className="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 hover:bg-accent hover:text-accent-foreground h-9 py-2 w-9 px-0 hover:text-[#C1178C]">
