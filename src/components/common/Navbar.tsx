@@ -1,8 +1,6 @@
 import { Facebook, Menu } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import RadialMenu from "./RadialMenu";
-
 const menuItems = [
   {
     title: "Home",
@@ -70,7 +68,6 @@ const Navbar = () => {
               );
             })}
           </nav>
-          <RadialMenu/>
         </div>
 
         <div className="flex flex-1 items-center justify-between space-x-2 md:justify-end">

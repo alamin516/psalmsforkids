@@ -14,7 +14,7 @@ const BlogSidebar = () => {
 
       <div className="mb-8">
         <h2 className="text-xl font-bold mb-4">Categories</h2>
-        <ul className="space-y-2">
+        <ul className="space-y-2 text-sm">
           <li className="flex justify-between">
             <span>Christian Children</span>
             <span>12</span>
