@@ -1,5 +1,5 @@
 "use client";
-import { Facebook, Menu } from "lucide-react";
+import { ChevronDown, ChevronRight, Facebook, Menu } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import React, { useState } from "react";
@@ -15,7 +15,49 @@ const menuItems = [
     title: "About",
     path: "/about",
     classes: "",
-    dropdown: [],
+    dropdown: [
+      {
+        title: "About",
+        path: "#",
+        classes: "",
+        dropdown: [],
+      },
+      {
+        title: "Welcome",
+        path: "#",
+        classes: "",
+        dropdown: [],
+      },
+      {
+        title: "Mission",
+        path: "#",
+        classes: "",
+        dropdown: [],
+      },
+      {
+        title: "Bible",
+        path: "#",
+        classes: "",
+        dropdown: [
+          {
+            title: "Old Testament",
+            path: "#",
+            classes: "",
+          },
+          {
+            title: "New Testament",
+            path: "#",
+            classes: "",
+          },
+        ],
+      },
+      {
+        title: "Testimonials",
+        path: "#",
+        classes: "",
+        dropdown: [],
+      },
+    ],
   },
   {
     title: "Shop",
@@ -59,6 +101,10 @@ const menuItems = [
   },
 ];
 
+interface IMenuitems {
+  tit;
+}
+
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -67,7 +113,8 @@ const Navbar = () => {
   };
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-[#212f3c] text-white">
+    // sticky top-0 z-50 w-full border-b border-border/40 bg-[#212f3c] text-white
+    <header className="absolute top-0 z-50 w-full border-b border-border/40 glass-button text-white">
       <div className="container flex h-[72px] max-w-7xl items-center justify-between px-4">
         <div className="flex items-center">
           <Link href="/">
@@ -81,11 +128,11 @@ const Navbar = () => {
             />
           </Link>
         </div>
-        <nav className="hidden md:flex space-x-6">
+        {/* <nav className="hidden md:flex">
           {menuItems.map((item, i) => (
             <div key={i} className="relative group">
               <Link
-                className={`${item.classes} transition-colors text-white hover:text-[#C1178C]`}
+                className={`${item.classes} transition-colors text-white text-sm px-4 hover:text-[#C1178C] leading-[72px] cursor-pointer`}
                 href={item.path}
               >
                 {item.title}
@@ -93,10 +140,79 @@ const Navbar = () => {
               {item.dropdown.length > 0 && (
                 <ul className="absolute left-0 mt-0 hidden w-48 glass-button text-black border border-gray-300 rounded shadow-lg group-hover:block z-50">
                   {item.dropdown.map((dropdownItem, index) => (
-                    <li key={index} className="p-2 hover:bg-[#C1178C] hover:text-white">
+                    <li
+                      key={index}
+                      className="p-2 hover:bg-[#C1178C] hover:text-white relative group"
+                    >
                       <Link href={dropdownItem.path} className="block">
                         {dropdownItem.title}
                       </Link>
+                      {dropdownItem?.dropdown?.length > 0 && (
+                        <ul className="absolute -right-[102%] mt-0 top-0 hidden w-48 glass-button text-black border border-gray-300 rounded shadow-lg group-hover:block z-50">
+                          {dropdownItem?.dropdown?.map((sub_dropdown, index) => (
+                            <li
+                              key={index}
+                              className="p-2 hover:bg-[#C1178C] hover:text-white"
+                            >
+                              <Link href={sub_dropdown.path} className="block">
+                                {sub_dropdown.title}
+                              </Link>
+                            </li>
+                          ))}
+                        </ul>
+                      )}
+                    </li>
+                  ))}
+                </ul>
+              )}
+            </div>
+          ))}
+        </nav> */}
+
+        <nav className="hidden md:flex">
+          {menuItems.map((item, i) => (
+            <div key={i} className="relative group">
+              <Link
+                className={`${item.classes} transition-colors text-white text-sm px-4 hover:text-[#C1178C] leading-[72px] cursor-pointer`}
+                href={item.path}
+              >
+                {item.title}
+                {item.dropdown.length > 0 && (
+                  <ChevronDown className="inline ml-1 w-4" />
+                )}
+              </Link>
+              {item.dropdown.length > 0 && (
+                <ul className="absolute left-0 mt-0 hidden w-48 glass-button text-black border border-gray-300 rounded shadow-lg group-hover:block z-50 dropdown-menu">
+                  {item.dropdown.map((dropdownItem, index) => (
+                    <li
+                      key={index}
+                      className="p-2 hover:bg-[#C1178C] hover:text-white relative group"
+                    >
+                      <Link
+                        href={dropdownItem.path}
+                        className="block flex items-center justify-between"
+                      >
+                        {dropdownItem.title}
+                        {dropdownItem?.dropdown?.length > 0 && (
+                          <ChevronRight className="inline ml-1 w-4" />
+                        )}
+                      </Link>
+                      {dropdownItem?.dropdown?.length > 0 && (
+                        <ul className="absolute left-full top-0 mt-0 hidden w-48 glass-button text-black border border-gray-300 rounded shadow-lg group-hover:block z-50 sub-dropdown-menu">
+                          {dropdownItem?.dropdown?.map(
+                            (subDropdown, subIndex) => (
+                              <li
+                                key={subIndex}
+                                className="p-2 hover:bg-[#C1178C] hover:text-white"
+                              >
+                                <Link href={subDropdown.path} className="block">
+                                  {subDropdown.title}
+                                </Link>
+                              </li>
+                            )
+                          )}
+                        </ul>
+                      )}
                     </li>
                   ))}
                 </ul>
