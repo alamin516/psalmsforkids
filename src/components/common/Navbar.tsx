@@ -101,9 +101,7 @@ const menuItems = [
   },
 ];
 
-interface IMenuitems {
-  tit;
-}
+
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
