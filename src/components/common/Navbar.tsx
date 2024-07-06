@@ -1,10 +1,17 @@
 "use client";
-import { ChevronDown, ChevronRight, Facebook, Menu } from "lucide-react";
+import { ChevronDown, ChevronRight, Menu, X } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import React, { useState } from "react";
+import { useState } from "react";
 
-const menuItems = [
+interface MenuItem {
+  title: string;
+  path: string;
+  classes: string;
+  dropdown?: MenuItem[];
+}
+
+const menuItems: MenuItem[] = [
   {
     title: "Home",
     path: "/",
@@ -101,8 +108,6 @@ const menuItems = [
   },
 ];
 
-
-
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -112,7 +117,7 @@ const Navbar = () => {
 
   return (
     // sticky top-0 z-50 w-full border-b border-border/40 bg-[#212f3c] text-white
-    <header className="absolute top-0 z-50 w-full border-b border-border/40 glass-button text-white">
+    <header className="absolute top-0 z-[9999] w-full border-b border-border/40 glass-button text-white">
       <div className="container flex h-[72px] max-w-7xl items-center justify-between px-4">
         <div className="flex items-center">
           <Link href="/">
@@ -175,12 +180,12 @@ const Navbar = () => {
                 href={item.path}
               >
                 {item.title}
-                {item.dropdown.length > 0 && (
+                {item.dropdown && item.dropdown.length > 0 && (
                   <ChevronDown className="inline ml-1 w-4" />
                 )}
               </Link>
-              {item.dropdown.length > 0 && (
-                <ul className="absolute left-0 mt-0 hidden w-48 glass-button text-black border border-gray-300 rounded shadow-lg group-hover:block z-50 dropdown-menu">
+              {item.dropdown && item.dropdown.length > 0 && (
+                <ul className="absolute left-0 mt-0 hidden w-48 glass-button text-black border border-gray-300 rounded shadow-lg group-hover:block z-50">
                   {item.dropdown.map((dropdownItem, index) => (
                     <li
                       key={index}
@@ -191,26 +196,31 @@ const Navbar = () => {
                         className="block flex items-center justify-between"
                       >
                         {dropdownItem.title}
-                        {dropdownItem?.dropdown?.length > 0 && (
-                          <ChevronRight className="inline ml-1 w-4" />
-                        )}
-                      </Link>
-                      {dropdownItem?.dropdown?.length > 0 && (
-                        <ul className="absolute left-full top-0 mt-0 hidden w-48 glass-button text-black border border-gray-300 rounded shadow-lg group-hover:block z-50 sub-dropdown-menu">
-                          {dropdownItem?.dropdown?.map(
-                            (subDropdown, subIndex) => (
-                              <li
-                                key={subIndex}
-                                className="p-2 hover:bg-[#C1178C] hover:text-white"
-                              >
-                                <Link href={subDropdown.path} className="block">
-                                  {subDropdown.title}
-                                </Link>
-                              </li>
-                            )
+                        {dropdownItem.dropdown &&
+                          dropdownItem.dropdown.length > 0 && (
+                            <ChevronRight className="inline ml-1 w-4" />
                           )}
-                        </ul>
-                      )}
+                      </Link>
+                      {dropdownItem.dropdown &&
+                        dropdownItem.dropdown.length > 0 && (
+                          <ul className="absolute left-full top-0 mt-0 hidden w-48 glass-button text-black border border-gray-300 rounded shadow-lg group-hover:block z-50">
+                            {dropdownItem.dropdown.map(
+                              (subDropdown, subIndex) => (
+                                <li
+                                  key={subIndex}
+                                  className="p-2 hover:bg-[#C1178C] hover:text-white"
+                                >
+                                  <Link
+                                    href={subDropdown.path}
+                                    className="block"
+                                  >
+                                    {subDropdown.title}
+                                  </Link>
+                                </li>
+                              )
+                            )}
+                          </ul>
+                        )}
                     </li>
                   ))}
                 </ul>
@@ -224,13 +234,13 @@ const Navbar = () => {
             onClick={toggleMenu}
             className="text-white hover:text-[#C1178C] focus:outline-none"
           >
-            <Menu className="h-6 w-6" />
+            {isOpen ? <X className="h-6 w-6"/>:<Menu className="h-6 w-6" />}
           </button>
         </div>
       </div>
 
       {isOpen && (
-        <div className="md:hidden bg-[#212f3c] text-white absolute top-[72px] left-0 w-full h-calc[100vh-72px]">
+        <div className="md:hidden bg-[#212f3c] text-white absolute top-[72px] left-0 w-full h-[calc(100vh-72px)]">
           <nav className="flex flex-col p-4">
             {menuItems.map((item, i) => (
               <div key={i} className="relative group">
@@ -240,7 +250,7 @@ const Navbar = () => {
                 >
                   {item.title}
                 </Link>
-                {item.dropdown.length > 0 && (
+                {item.dropdown && item.dropdown.length > 0 && (
                   <ul className="pl-4">
                     {item.dropdown.map((dropdownItem, index) => (
                       <li key={index} className="py-1">
