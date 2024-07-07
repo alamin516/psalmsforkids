@@ -15,10 +15,10 @@ const page = () => {
         <div className="container max-w-7xl mx-auto p-0 lg:px-8 text-sm text-gray-600 leading-[26px]">
           <div className="grid lg:grid-cols-8 grid-cols-1 gap-10">
             <div className="lg:col-span-6">
-                <Posts posts={posts}/>
+              <Posts posts={posts} />
             </div>
             <div className="lg:col-span-2">
-                <BlogSidebar/>
+              <BlogSidebar />
             </div>
           </div>
         </div>
@@ -29,76 +29,181 @@ const page = () => {
 
 export default page;
 
-
 const posts = [
   {
-    "id": 1,
-    "title": "James Cleveland - Where Is Your Faith In God",
-    "imageUrl": "/images/posts/2.webp",
-    "description": "Rev. James Cleveland - \"Where Is Your Faith In God\" Continue listening: https://malaco-music-group.lnk.to/ZXN-tID Lyrics: Verse...",
-    "link": "https://malaco-music-group.lnk.to/ZXN-tID"
+    id: 1,
+    title: "James Cleveland - Where Is Your Faith In God",
+    imageUrl: "/images/posts/2.webp",
+    description:
+      'Rev. James Cleveland - "Where Is Your Faith In God" Continue listening: https://malaco-music-group.lnk.to/ZXN-tID Lyrics: Verse...',
+    link: "https://malaco-music-group.lnk.to/ZXN-tID",
   },
   {
-    "id": 2,
-    "title": "Another Post Title",
-    "imageUrl": "/images/posts/2.webp",
-    "description": "Description for the second post.",
-    "link": "https://example.com/link2"
+    id: 2,
+    title: "Another Post Title",
+    imageUrl: "/images/posts/2.webp",
+    description: "Description for the second post.",
+    link: "https://example.com/link2",
   },
   {
-    "id": 3,
-    "title": "Third Post Title",
-    "imageUrl": "/images/posts/2.webp",
-    "description": "Description for the third post.",
-    "link": "https://example.com/link3"
+    id: 3,
+    title: "Third Post Title",
+    imageUrl: "/images/posts/2.webp",
+    description: "Description for the third post.",
+    link: "https://example.com/link3",
   },
   {
-    "id": 4,
-    "title": "Fourth Post Title",
-    "imageUrl": "/images/posts/2.webp",
-    "description": "Description for the fourth post.",
-    "link": "https://example.com/link4"
+    id: 4,
+    title: "Fourth Post Title",
+    imageUrl: "/images/posts/2.webp",
+    description: "Description for the fourth post.",
+    link: "https://example.com/link4",
   },
   {
-    "id": 5,
-    "title": "Fifth Post Title",
-    "imageUrl": "/images/posts/2.webp",
-    "description": "Description for the fifth post.",
-    "link": "https://example.com/link5"
+    id: 5,
+    title: "Fifth Post Title",
+    imageUrl: "/images/posts/2.webp",
+    description: "Description for the fifth post.",
+    link: "https://example.com/link5",
   },
   {
-    "id": 6,
-    "title": "Sixth Post Title",
-    "imageUrl": "/images/posts/2.webp",
-    "description": "Description for the sixth post.",
-    "link": "https://example.com/link6"
+    id: 6,
+    title: "Sixth Post Title",
+    imageUrl: "/images/posts/2.webp",
+    description: "Description for the sixth post.",
+    link: "https://example.com/link6",
   },
   {
-    "id": 7,
-    "title": "Seventh Post Title",
-    "imageUrl": "/images/posts/2.webp",
-    "description": "Description for the seventh post.",
-    "link": "https://example.com/link7"
+    id: 7,
+    title: "Seventh Post Title",
+    imageUrl: "/images/posts/2.webp",
+    description: "Description for the seventh post.",
+    link: "https://example.com/link7",
   },
   {
-    "id": 8,
-    "title": "Eighth Post Title",
-    "imageUrl": "/images/posts/2.webp",
-    "description": "Description for the eighth post.",
-    "link": "https://example.com/link8"
+    id: 8,
+    title: "Eighth Post Title",
+    imageUrl: "/images/posts/2.webp",
+    description: "Description for the eighth post.",
+    link: "https://example.com/link8",
   },
   {
-    "id": 9,
-    "title": "Ninth Post Title",
-    "imageUrl": "/images/posts/2.webp",
-    "description": "Description for the ninth post.",
-    "link": "https://example.com/link9"
+    id: 9,
+    title: "Ninth Post Title",
+    imageUrl: "/images/posts/2.webp",
+    description: "Description for the ninth post.",
+    link: "https://example.com/link9",
   },
   {
-    "id": 10,
-    "title": "Tenth Post Title",
-    "imageUrl": "/images/posts/2.webp",
-    "description": "Description for the tenth post.",
-    "link": "https://example.com/link10"
-  }
-]
+    id: 10,
+    title: "Tenth Post Title",
+    imageUrl: "/images/posts/2.webp",
+    description: "Description for the tenth post.",
+    link: "https://example.com/link10",
+  },
+  {
+    id: 11,
+    title: "Tenth Post Title",
+    imageUrl: "/images/posts/2.webp",
+    description: "Description for the tenth post.",
+    link: "https://example.com/link10",
+  },
+  {
+    id: 12,
+    title: "Tenth Post Title",
+    imageUrl: "/images/posts/2.webp",
+    description: "Description for the tenth post.",
+    link: "https://example.com/link10",
+  },
+  {
+    id: 13,
+    title: "Tenth Post Title",
+    imageUrl: "/images/posts/2.webp",
+    description: "Description for the tenth post.",
+    link: "https://example.com/link10",
+  },
+  {
+    id: 14,
+    title: "Tenth Post Title",
+    imageUrl: "/images/posts/2.webp",
+    description: "Description for the tenth post.",
+    link: "https://example.com/link10",
+  },
+  {
+    id: 15,
+    title: "Tenth Post Title",
+    imageUrl: "/images/posts/2.webp",
+    description: "Description for the tenth post.",
+    link: "https://example.com/link10",
+  },
+  {
+    id: 16,
+    title: "Tenth Post Title",
+    imageUrl: "/images/posts/2.webp",
+    description: "Description for the tenth post.",
+    link: "https://example.com/link10",
+  },
+  {
+    id: 17,
+    title: "Tenth Post Title",
+    imageUrl: "/images/posts/2.webp",
+    description: "Description for the tenth post.",
+    link: "https://example.com/link10",
+  },
+  {
+    id: 18,
+    title: "Tenth Post Title",
+    imageUrl: "/images/posts/2.webp",
+    description: "Description for the tenth post.",
+    link: "https://example.com/link10",
+  },
+  {
+    id: 19,
+    title: "Tenth Post Title",
+    imageUrl: "/images/posts/2.webp",
+    description: "Description for the tenth post.",
+    link: "https://example.com/link10",
+  },
+  {
+    id: 20,
+    title: "Tenth Post Title",
+    imageUrl: "/images/posts/2.webp",
+    description: "Description for the tenth post.",
+    link: "https://example.com/link10",
+  },
+  {
+    id: 21,
+    title: "Tenth Post Title",
+    imageUrl: "/images/posts/2.webp",
+    description: "Description for the tenth post.",
+    link: "https://example.com/link10",
+  },
+  {
+    id: 22,
+    title: "Tenth Post Title",
+    imageUrl: "/images/posts/2.webp",
+    description: "Description for the tenth post.",
+    link: "https://example.com/link10",
+  },
+  {
+    id: 23,
+    title: "Tenth Post Title",
+    imageUrl: "/images/posts/2.webp",
+    description: "Description for the tenth post.",
+    link: "https://example.com/link10",
+  },
+  {
+    id: 24,
+    title: "Tenth Post Title",
+    imageUrl: "/images/posts/2.webp",
+    description: "Description for the tenth post.",
+    link: "https://example.com/link10",
+  },
+  {
+    id: 25,
+    title: "Tenth Post Title",
+    imageUrl: "/images/posts/2.webp",
+    description: "Description for the tenth post.",
+    link: "https://example.com/link10",
+  },
+];
