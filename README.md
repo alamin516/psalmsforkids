@@ -89,19 +89,5 @@ We welcome contributions to PsalmsForKids! To contribute, please follow these st
 
 5. **Open a pull request.**
 
-Please ensure your code adheres to our coding standards and includes appropriate tests.
-
-## License
-
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
-
-## Contact
-
-If you have any questions, suggestions, or feedback, feel free to contact us at:
-
-- Email: support@psalmsforkids.com
-- Twitter: [@PsalmsForKids](https://twitter.com/psalmsforkids)
-
----
 
 Thank you for using PsalmsForKids! We hope this project helps children learn and enjoy the Psalms in a fun and interactive way.
